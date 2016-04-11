@@ -1,0 +1,30 @@
+package com.javarush.test.level04.lesson16.home02;
+
+import java.io.*;
+import java.nio.Buffer;
+import java.util.Scanner;
+
+/* Среднее такое среднее
+Ввести с клавиатуры три числа, вывести на экран среднее из них. Т.е. не самое большое и не самое маленькое.
+*/
+
+public class Solution
+{
+    public static void main(String[] args)   throws Exception
+    {
+        Scanner scanner = new Scanner(System.in);
+        int x1 = scanner.nextInt();
+        int x2 = scanner.nextInt();
+        int x3 = scanner.nextInt();
+
+        if(x1>x2 && x1<x3 || x1<x2 && x1>x3){
+            System.out.println(x1);
+        }
+        if(x2>x1 && x2<x3 || x2<x1 && x2>x3){
+            System.out.println(x2);
+        }
+        if(x3>x1 && x3<x2 || x3<x1 && x3>x2){
+            System.out.println(x3);
+        }
+    }
+}
